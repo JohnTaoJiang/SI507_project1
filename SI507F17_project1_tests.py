@@ -17,6 +17,7 @@ from SI507F17_project1_cards import *
 
 
 class CardTests(unittest.TestCase):
+
     def setUp(self):
         self.Card1 = Card(1, 5)
         self.Card2 = Card(2, 13)
@@ -35,6 +36,7 @@ class CardTests(unittest.TestCase):
 
 
 class DeckTests(unittest.TestCase):
+
     def setUp(self):
         self.deck1 = Deck()
 
@@ -128,6 +130,7 @@ class DeckTests(unittest.TestCase):
 
 
 class PlayTest(unittest.TestCase):
+
     def test_func(self):
         self.assertTrue(isinstance(play_war_game(True), tuple))
         self.assertTrue(isinstance(play_war_game(True)[0], str))
@@ -136,10 +139,11 @@ class PlayTest(unittest.TestCase):
 
 
 class ShowSongTest(unittest.TestCase):
+
     def test_func(self):
         self.assertTrue(
             isinstance(show_song("loser"), helper_functions.Song),
-            "testing if any term can be searched")
+            "testing the type of return value and if any term can be searched")
         self.assertTrue(isinstance(show_song("love"), helper_functions.Song))
 
 if __name__ == "__main__":
